@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+font-size: 100%;
+font-style: normal;
+}
+
+html,
+body {
+height: 100%;
+overflow: hidden;
+}
+
+html {
+font-size: 16px;
+}
+
+@media screen and (min-width: 600px) {
+html {
+
+}
+}
+
+@media screen and (min-width: 1200px) {
+html {
+font-size: 1.25rem;
+}
+}
+
+@font-face {
+    font-family: 'suisse';
+    src: url('../fonts/suisseintl-semibold-webm.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'suisseitalic';
+    src: url('../fonts/suisseintl-semibolditalic-webm.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'suisseitalic';
+    src: url('../fonts/suisseintl-regular-webm.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'suisseitalic';
+    src: url('../fonts/suisseintl-regularitalic-webm.woff2') format('woff2');
+    font-weight: 400;
+}
+
+.header {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin:  0 auto;
+  padding: 1rem;
+  background-color: black;
+}
+
+#home {
+    position: absolute;
+    float: left;
+    z-index: 0;
+}
+
+#about {
+    max-width: 70vw;
+    float: left;
+    z-index: 1;
+}
+
+#time {
+    float: right;
+    max-width: 30vw;
+    letter-spacing: .075rem; 
+}
+
+#contact {
+    float: right;
+    max-width: 30vw;
+    letter-spacing: .025rem; 
+}
+
+body {
+position: relative;
+font-family: suisse, suisseitalic, sans-serif;
+font-weight: 700;
+line-height: 1.5;
+word-break: keep-all;
+color: #75ead7;
+background-color: black;
+cursor: default;
+}
+
+a {
+text-decoration: none;
+color: #75ead7;
+cursor: pointer;
+}
+
+section {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+-ms-overflow-style: none;
+scrollbar-width: none;
+padding: 1rem;
+text-decoration: none;
+color: inherit;
+background-color: inherit;
+outline: 0;
+}
+
+section::-webkit-scrollbar {
+display: none;
+}
+
+section figcaption::selection {
+color: gray;
+background-color: transparent;
+}
+
+section figcaption a {
+animation-direction: alternate-reverse;
+}
+
+@keyframes blink {
+0% {
+opacity: .25;
+}
+100% {
+opacity: 1;
+}
+}
