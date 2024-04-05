@@ -160,13 +160,11 @@ body {
 
 #time {
     float: right;
-    max-width: 30vw;
     letter-spacing: .075rem; 
 }
 
 #contact {
     float: left;
-    max-width: 30vw;
     letter-spacing: .025rem; 
 }
 
