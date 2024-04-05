@@ -153,6 +153,11 @@ body {
     float: left;
 }
 
+#nextInside {
+    position: relative;
+    float: right;
+}
+
 #about {
     max-width: 50rem;
     float: left;
