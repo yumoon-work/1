@@ -34,7 +34,7 @@ body {
 @font-face {
     font-family: 'suissemono';
     src: url('../fonts/suisseintlmono-bold-webxl.woff2') format('woff2');
-    font-weight: 400;
+    font-weight: 600;
 }
 
 @font-face {
@@ -44,6 +44,10 @@ body {
 }
 
 .header {
+/*
+    z-index: 100;
+    position: absolute;
+*/
     z-index: 100;
     position: absolute;
     width: 100vw;
@@ -56,6 +60,10 @@ body {
 }
 
 .footer {
+/*
+    z-index: 100;
+    position: absolute;
+*/
     z-index: 100;
     position: absolute;
     bottom: 0;
@@ -128,7 +136,7 @@ body {
 
 .bubble5,
 .bubble4,
-.bubble2 {
+.bubble1 {
     background-color: rgb(223, 223, 223);
 }
 
@@ -160,12 +168,34 @@ body {
 
 .bubble5-text,
 .bubble4-text,
-.bubble2-text,
+.bubble1-text,
 .bubble5 a,
 .bubble4 a,
-.bubble2 a  {
+.bubble1 a  {
     color: black;
 }
+
+/*
+.category {
+    display: inline;
+    z-index: 300;
+    flex: 100vw;
+    margin: 300px;
+    border-radius: 2.4em;
+    border: 0.1rem solid black;
+    background-color: white;
+    color: black;
+    font-family: suissemono;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -0.03em;
+    padding: .5em;
+    position: absoulute;
+    float: left;
+    bottom: 7.5rem;
+    text-align: center;
+}
+*/
 
 #home {
     position: absolute;
@@ -183,7 +213,7 @@ body {
 }
 
 #about {
-    max-width: 50rem;
+    max-width: 49rem;
     float: left;
 }
 
@@ -204,6 +234,68 @@ body {
     position: absolute;
     left: 50%;
     top: 0;
+}
+
+#headerInside {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin:  0 auto;
+    padding: 0.8rem 1rem;
+    background-color: white;
+    border-bottom: 0.1rem solid black;
+}
+
+#credit {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    flex: 30%;
+    width: 100%;
+    max-height: 100vh;
+    padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 0%;
+    border-right: 0.1rem solid black;
+ }
+
+#tag {
+/*
+    font-family: suissemono;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+*/
+    display: flex;
+    border-bottom: 0.1rem dotted #000;
+ }
+
+#parent {
+    flex: 30%;
+ }
+
+#child {
+    flex: 70%;
+ }
+
+ #description {
+    font-weight: 500;
+ }
+
+#images {
+    flex: 70%;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    width: 70vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#images img {
+    max-width: 100%;
+    padding: .5 1rem;
+
 }
 
 body {
@@ -244,11 +336,6 @@ img {
     max-width: 100vw;
     max-height: 100vh;
     object-fit: cover;
-}
-
-hr {
-    display: flex;
-    color: #75ead7;
 }
 
 @media screen and (max-width: 600px) {
@@ -318,4 +405,29 @@ hr {
         background-color: rgb(223, 223, 223);
         color: black;
     }
+
+    .bubble6 a:active,
+    .bubble5 a:active,
+    .bubble4 a:active,
+    .bubble3 a:active,
+    .bubble2 a:active,
+    .bubble1 a:active {
+        opacity: 0.6;
+        color: #636466;
+        cursor: pointer;
+        border-bottom: 0.1rem solid #636466;
+    }
 }
+
+@media screen and (max-width: 900px) {
+    #credit,
+    #images {
+        flex: 100%;
+        border-right: none;
+        position: relative;
+        position: relative;
+    }
+}
+
+
+
