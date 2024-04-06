@@ -104,8 +104,12 @@ body {
     object-fit: cover;
 }
 
-.bubble1,
-.bubble2 {
+.bubble6,
+.bubble5,
+.bubble4,
+.bubble3,
+.bubble2,
+.bubble1 {
     position: absolute;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -122,14 +126,24 @@ body {
     background: black;
 }
 
+.bubble5,
+.bubble4,
 .bubble2 {
     background-color: rgb(223, 223, 223);
 }
 
-.bubble1-text,
+.bubble6-text,
+.bubble5-text,
+.bubble4-text,
+.bubble3-text,
 .bubble2-text,
-.bubble1 a,
-.bubble2 a  {
+.bubble1-text,
+.bubble6 a,
+.bubble5 a,
+.bubble4 a,
+.bubble3 a,
+.bubble2 a,
+.bubble1 a  {
     color: white;
     position: absolute;
     top: 7.5rem;
@@ -144,14 +158,13 @@ body {
     text-align: left;
 }
 
+.bubble5-text,
+.bubble4-text,
 .bubble2-text,
+.bubble5 a,
+.bubble4 a,
 .bubble2 a  {
     color: black;
-}
-
-slide:nth-child(even) {
-color: yellow;
-background-color: magenta;
 }
 
 #home {
@@ -233,56 +246,12 @@ img {
     object-fit: cover;
 }
 
-/**
- * Thumbnail Hover
- */
-
-.thumbnails .thumbnail>a {
-    overflow: hidden;
-    position: relative;
-}
-
-.thumbnails .thumbnail .title {
-    background: var(--back);
-    padding: 0rem 0rem 0rem 0rem;
-    margin: 0px;
-    color: var(--fore);
-    align-content: center;
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--fore);
-    left: 0;
-    top: 0;
-    z-index: 9;
-    opacity: 0;
-}
-
-.thumbnails .thumbnail:hover .title {
-    padding: 0.5rem 1.2rem 0.7rem 1.2rem;
-    transition: 0.3s padding ease;
-}
-
-.thumbnails .title span {
-    margin: auto;
-    display: inline-block;
-}
-
-.thumbnails .thumbnail:hover .title {
-    opacity: 1;
-}
-
-body.mobile .thumbnails .thumbnail:hover .title {
-    opacity: 0;
-}
-
 hr {
     display: flex;
     color: #75ead7;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .header {
         flex: 100%;
     }
@@ -302,13 +271,51 @@ hr {
         position: relative;
         bottom: 0;
         left: 0;
+        min-height: 100vh;
         width: 100%;
         overflow: hidden;
         scroll-snap-align: center;
+        background-color: black;
+    }
+    .bubble6,
+    .bubble5,
+    .bubble4,
+    .bubble3,
+    .bubble2,
+    .bubble1,
+    .bubble6-text,
+    .bubble5-text,
+    .bubble4-text,
+    .bubble3-text,
+    .bubble2-text,
+    .bubble1-text,
+    .bubble6 a
+    .bubble5 a
+    .bubble4 a
+    .bubble3 a
+    .bubble2 a
+    .bubble1 a {
+            top: 4rem;
+            font-size: 20vw;
     }
 
+    .bubble4,
+    .bubble4-text,
+    .bubble4 a,
+    .bubble2,
+    .bubble2-text,
+    .bubble2 a {
+        background-color: black;
+        color: white;
+    }
+
+    .bubble3,
+    .bubble3-text,
+    .bubble3 a,
     .bubble1,
-    .bubble2 {
-        font-size: 20vw;
+    .bubble1-text,
+    .bubble1 a {
+        background-color: rgb(223, 223, 223);
+        color: black;
     }
 }
