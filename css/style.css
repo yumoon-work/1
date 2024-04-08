@@ -21,33 +21,24 @@ body {
 
 @font-face {
     font-family: 'suisse';
-    src: url('../fonts/suisseintl-semibold-webm.woff2') format('woff2');
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'suisse';
-    src: url('../fonts/suisseintl-medium-webm.woff2') format('woff2');
+    src: url('../fonts/SuisseIntl-Medium-WebM.woff2') format('woff2');
     font-weight: 500;
 }
 
 @font-face {
-    font-family: 'suissemono';
-    src: url('../fonts/suisseintlmono-bold-webxl.woff2') format('woff2');
-    font-weight: 600;
+    font-family: 'suisse';
+    src: url('../fonts/SuisseIntl-Regular-WebM.woff2') format('woff2');
+    font-weight: 400;
 }
 
+
 @font-face {
-    font-family: 'suissemono';
-    src: url('../fonts/suisseintlmono-regular-webxl.woff2') format('woff2');
+    font-family: 'groteskremix';
+    src: url('../fonts/GroteskRemix-regular.woff2') format('woff2');
     font-weight: 400;
 }
 
 .header {
-/*
-    z-index: 100;
-    position: absolute;
-*/
     z-index: 100;
     position: absolute;
     width: 100vw;
@@ -106,59 +97,52 @@ body {
     scroll-snap-align: center;
 }
 
-.bubble img {
+.title img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.bubble6,
-.bubble5,
-.bubble4,
-.bubble3,
-.bubble2,
-.bubble1 {
+.title6,
+.title5,
+.title4,
+.title3,
+.title2,
+.title1 {
+    font-family: groteskremix;
     position: absolute;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
     min-height: 100vh;
     width: 100%;
     border-radius: 0%;
     display: flex;
+/*
     align-items: center;
     justify-content: center;
-    transition: border-radius 0.3s ease-in-out;
-    font-size: 11vw;
-    line-height: 1;
+    line-height: 1.15;
+*/
+    font-size: 12vw;
+    line-height: 1.15;
     letter-spacing: -0.02em;
     background: black;
 }
 
-.bubble5,
-.bubble4,
-.bubble1 {
+.title5,
+.title4,
+.title1 {
     background-color: rgb(223, 223, 223);
 }
 
-.bubble6-text,
-.bubble5-text,
-.bubble4-text,
-.bubble3-text,
-.bubble2-text,
-.bubble1-text,
-.bubble6 a,
-.bubble5 a,
-.bubble4 a,
-.bubble3 a,
-.bubble2 a,
-.bubble1 a  {
+.title6 .left,
+.title5 .left,
+.title4 .left,
+.title3 .left,
+.title2 .left,
+.title1 .left  {
     color: white;
     position: absolute;
     top: 7.5rem;
     left: 1rem;
-    right: 0;
-    bottom: 0;
-    display: flex;
     align-items: left;
     justify-content: lett;
     z-index: 1;
@@ -166,36 +150,55 @@ body {
     text-align: left;
 }
 
-.bubble5-text,
-.bubble4-text,
-.bubble1-text,
-.bubble5 a,
-.bubble4 a,
-.bubble1 a  {
-    color: black;
+.title6 .right,
+.title5 .right,
+.title4 .right,
+.title3 .right,
+.title2 .right,
+.title1 .right  {
+    color: white;
+    position: absolute;
+    top: 7.5rem;
+    right: 1rem;
+    align-items: right;
+    justify-content: right;
+    z-index: 1;
+    overflow: hidden;
+    text-align: right;
 }
 
-/*
+.title5 .left,
+.title5 .right,
+.title4 .left,
+.title1 .left,
+.title1 .right  {
+    color: black !important;
+}
+
 .category {
-    display: inline;
-    z-index: 300;
-    flex: 100vw;
-    margin: 300px;
-    border-radius: 2.4em;
+    display: flex;
+    position: absolute;
+    float: left;
+    top: 50.75rem;
+    left: 1rem;
+    text-align: center;
+    flex-wrap: wrap;
+    max-height: 2em;
+}
+
+.category span {
+    border-radius: 4em;
     border: 0.1rem solid black;
     background-color: white;
     color: black;
-    font-family: suissemono;
-    font-weight: 400;
+    font-family: suisse;
     font-size: 1rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     padding: .5em;
-    position: absoulute;
-    float: left;
-    bottom: 7.5rem;
-    text-align: center;
+    min-width: 3em;
+    max-height: 3em;
+    margin-right: .25em;
 }
-*/
 
 #home {
     position: absolute;
@@ -258,6 +261,7 @@ body {
     overflow-y: scroll;
     border-radius: 0%;
     border-right: 0.1rem solid black;
+    font-family: groteskremix;
  }
 
 #tag {
@@ -300,7 +304,7 @@ body {
 
 body {
     position: relative;
-    font-family: suisse, suissemono, sans-serif;
+    font-family: suisse, groteskremix, sans-serif;
     font-weight: 500;
     line-height: 1.5;
     word-break: keep-all;
@@ -322,6 +326,14 @@ a:hover {
     color: #636466;
     cursor: pointer;
     border-bottom: 0.1rem solid #636466;
+}
+
+.link:hover .left,
+.link:hover .right {
+    color: #636466 !important;
+    cursor: pointer;
+    border-bottom: 0.25rem solid #636466;
+
 }
 
 a:active {
@@ -364,54 +376,54 @@ img {
         scroll-snap-align: center;
         background-color: black;
     }
-    .bubble6,
-    .bubble5,
-    .bubble4,
-    .bubble3,
-    .bubble2,
-    .bubble1,
-    .bubble6-text,
-    .bubble5-text,
-    .bubble4-text,
-    .bubble3-text,
-    .bubble2-text,
-    .bubble1-text,
-    .bubble6 a
-    .bubble5 a
-    .bubble4 a
-    .bubble3 a
-    .bubble2 a
-    .bubble1 a {
+    .title6,
+    .title5,
+    .title4,
+    .title3,
+    .title2,
+    .title1,
+    .title6-text,
+    .title5-text,
+    .title4-text,
+    .title3-text,
+    .title2-text,
+    .title1-text,
+    .title6 a
+    .title5 a
+    .title4 a
+    .title3 a
+    .title2 a
+    .title1 a {
             top: 4rem;
             font-size: 20vw;
     }
 
-    .bubble4,
-    .bubble4-text,
-    .bubble4 a,
-    .bubble2,
-    .bubble2-text,
-    .bubble2 a {
+    .title4,
+    .title4-text,
+    .title4 a,
+    .title2,
+    .title2-text,
+    .title2 a {
         background-color: black;
         color: white;
     }
 
-    .bubble3,
-    .bubble3-text,
-    .bubble3 a,
-    .bubble1,
-    .bubble1-text,
-    .bubble1 a {
+    .title3,
+    .title3-text,
+    .title3 a,
+    .title1,
+    .title1-text,
+    .title1 a {
         background-color: rgb(223, 223, 223);
         color: black;
     }
 
-    .bubble6 a:active,
-    .bubble5 a:active,
-    .bubble4 a:active,
-    .bubble3 a:active,
-    .bubble2 a:active,
-    .bubble1 a:active {
+    .title6 a:active,
+    .title5 a:active,
+    .title4 a:active,
+    .title3 a:active,
+    .title2 a:active,
+    .title1 a:active {
         opacity: 0.6;
         color: #636466;
         cursor: pointer;
