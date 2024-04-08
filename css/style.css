@@ -159,7 +159,7 @@ body {
     color: white;
     position: absolute;
     top: 7.5rem;
-    right: 1rem;
+    right: 1.15rem;
     align-items: right;
     justify-content: right;
     z-index: 1;
@@ -179,7 +179,7 @@ body {
     display: flex;
     position: absolute;
     float: left;
-    top: 50.75rem;
+    top: 49.5rem;
     left: 1rem;
     text-align: center;
     flex-wrap: wrap;
@@ -376,46 +376,33 @@ img {
         scroll-snap-align: center;
         background-color: black;
     }
+
     .title6,
     .title5,
     .title4,
     .title3,
     .title2,
-    .title1,
-    .title6-text,
-    .title5-text,
-    .title4-text,
-    .title3-text,
-    .title2-text,
-    .title1-text,
-    .title6 a
-    .title5 a
-    .title4 a
-    .title3 a
-    .title2 a
-    .title1 a {
+    .title1 {
             top: 4rem;
             font-size: 20vw;
     }
 
     .title4,
-    .title4-text,
-    .title4 a,
-    .title2,
-    .title2-text,
-    .title2 a {
+    .title2 {
         background-color: black;
-        color: white;
     }
 
     .title3,
-    .title3-text,
-    .title3 a,
-    .title1,
-    .title1-text,
-    .title1 a {
+    .title1 {
         background-color: rgb(223, 223, 223);
-        color: black;
+    }
+
+    .title4 .left {
+        color: white !important;
+    }
+
+    .title3 .left {
+        color: black !important;
     }
 
     .title6 a:active,
@@ -428,6 +415,10 @@ img {
         color: #636466;
         cursor: pointer;
         border-bottom: 0.1rem solid #636466;
+    }
+
+    .category {
+        top: 45.5rem;
     }
 }
 
