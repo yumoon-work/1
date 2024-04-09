@@ -48,6 +48,7 @@ body {
     padding: 0.8rem 1rem;
     background-color: white;
     border-bottom: 0.1rem solid black;
+    box-sizing: border-box;
 }
 
 .footer {
@@ -65,6 +66,7 @@ body {
     padding: 0.8rem 1rem;
     background-color: white;
     border-top: 0.1rem solid black;
+    box-sizing: border-box;
 }
 
 .container {
@@ -82,6 +84,7 @@ body {
     -ms-scroll-snap-type: y mandatory;
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
 }
 
 .container::-webkit-scrollbar {
@@ -93,6 +96,9 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
+/*
+    min-height: calc(100% - 57px);
+*/
     overflow: hidden;
     scroll-snap-align: center;
 }
@@ -179,7 +185,7 @@ body {
     display: flex;
     position: absolute;
     float: left;
-    top: 49.5rem;
+    bottom: 8.5vh;
     left: 1rem;
     text-align: center;
     flex-wrap: wrap;
@@ -256,7 +262,7 @@ body {
     flex: 30%;
     width: 100%;
     max-height: 100vh;
-    padding: 1rem;
+    padding: .8rem 1rem 1rem 1rem;
     overflow-x: hidden;
     overflow-y: scroll;
     border-radius: 0%;
@@ -272,6 +278,7 @@ body {
 */
     display: flex;
     border-bottom: 0.1rem dotted #000;
+    padding-top: 0.1rem;
  }
 
 #parent {
@@ -350,7 +357,20 @@ img {
     object-fit: cover;
 }
 
+/*mobile*/
+@media screen and (max-width: 450px) {
+        .category {
+        bottom: 8.35rem !important;
+        position: absolute;
+    }
+}
+
+/*between mobile and desktop*/
 @media screen and (max-width: 600px) {
+    body {
+        font-size: .85rem;
+    }
+
     .header {
         flex: 100%;
     }
@@ -383,7 +403,7 @@ img {
     .title3,
     .title2,
     .title1 {
-            top: 4rem;
+            top: 0rem;
             font-size: 20vw;
     }
 
@@ -418,8 +438,34 @@ img {
     }
 
     .category {
-        top: 45.5rem;
+        position: absolute;
+        bottom: 7.5vh;
     }
+
+    .category span {
+    border-radius: 4em;
+    border: 0.1rem solid black;
+    background-color: white;
+    color: black;
+    font-family: suisse;
+    font-size: .75rem;
+    letter-spacing: -0.01em;
+    padding: .5em;
+    min-width: 3em;
+    max-height: 3em;
+    margin-right: .25em;
+    }
+
+.container {
+        padding-bottom: 25vh;
+    }
+/*
+    #credit #images {
+    visibility: visible;
+    display: relative;
+    min-width: 100%;
+    } 
+*/
 }
 
 @media screen and (max-width: 900px) {
