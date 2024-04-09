@@ -85,6 +85,7 @@ body {
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
+    padding-bottom: 5vh;
 }
 
 .container::-webkit-scrollbar {
@@ -359,9 +360,13 @@ img {
 
 /*mobile*/
 @media screen and (max-width: 450px) {
-        .category {
+    .category {
         bottom: 8.35rem !important;
         position: absolute;
+    }
+
+    .container {
+        padding-bottom: 25vh;
     }
 }
 
@@ -439,7 +444,7 @@ img {
 
     .category {
         position: absolute;
-        bottom: 7.5vh;
+        bottom: 7.5vh !important;
     }
 
     .category span {
@@ -456,18 +461,19 @@ img {
     margin-right: .25em;
     }
 
-.container {
-        padding-bottom: 25vh;
+    .container {
+        padding-bottom: 10vh;
+        }
+    /*
+        #credit #images {
+        visibility: visible;
+        display: relative;
+        min-width: 100%;
+        } 
+    */
     }
-/*
-    #credit #images {
-    visibility: visible;
-    display: relative;
-    min-width: 100%;
-    } 
-*/
-}
 
+/*for inner pages flex*/
 @media screen and (max-width: 900px) {
     #credit,
     #images {
@@ -475,6 +481,43 @@ img {
         border-right: none;
         position: relative;
         position: relative;
+    }
+
+    .container {
+        padding-bottom: 15vh;
+    }
+}
+
+/*ipad portrait*/
+@media screen and (max-width: 950px) and (min-height: 1050px) and (max-height: 1200px) {
+    .category {
+        position: absolute;
+        bottom: 10.5vh;
+    }
+}
+
+
+/*ipad landscape*/
+@media screen and (max-width: 1200px) and (max-height: 950px) {
+    .category {
+        position: absolute;
+        bottom: 15vh;
+    }
+}
+
+
+/*ipad landscape pro 12.9-inch*/
+@media only screen and (min-width: 1366px) and (max-width: 1368px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+    .category {
+        position: absolute;
+        bottom: 11.75vh;
+    }
+}
+
+/*padding*/
+@media screen and (max-width: 1200px) {
+    .container {
+        padding-bottom: 10vh;
     }
 }
 
