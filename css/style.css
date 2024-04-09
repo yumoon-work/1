@@ -444,7 +444,10 @@ img {
 
     .category {
         position: absolute;
+        bottom: 7.5vh;
+/*
         bottom: 7.5vh !important;
+*/
     }
 
     .category span {
