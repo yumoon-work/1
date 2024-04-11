@@ -380,6 +380,7 @@ img {
     #images {
         padding-bottom: 12vh;
     }
+
 }
 
 /*between mobile and desktop*/
@@ -486,7 +487,11 @@ img {
         min-width: 100%;
         } 
     */
+
+    #images #desktop {
+    display: none;
     }
+}
 
 /*for inner pages flex*/
 @media screen and (max-width: 900px) {
@@ -533,6 +538,15 @@ img {
 @media screen and (min-width: 900px) {
     .container {
         padding-bottom: 10vh;
+    }
+
+
+}
+
+/*only mobile image*/
+@media screen and (min-width: 600px) {
+    #images #mobile {
+    display: none;
     }
 }
 
