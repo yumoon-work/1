@@ -351,7 +351,7 @@ img {
     }
 
     .containerLink {
-        padding: 25vh .65rem 8rem .65rem;
+        padding: 25vh .65rem 6rem .65rem;
         width: 100vw
     }
 
@@ -370,7 +370,7 @@ img {
     }
 
     #images img:last-child {
-    padding-bottom: 8rem !important;
+    padding-bottom: 6rem !important;
     }
 
     #images #desktop,
