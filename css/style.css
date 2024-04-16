@@ -373,7 +373,8 @@ img {
 
 
     .header {
-        font-size: 3vw;
+        font-size: 1.25rem;
+        line-height: inherit !important;
     }
 /*
         line-height: 1.65;
