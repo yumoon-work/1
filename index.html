@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yu Moon</title>
+	<meta name="description" content="Yu Moon Portfolio 2024">
+    <meta name="keywords" content="Yu Moon">
+    <meta property="og:url" content="yumoon.kr">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yu Moon">
+    <meta property="og:description" content="Yu Moon Portfolio 2024">
+    <meta property="og:image" href="images/og-image.jpg">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+	<!--last update: 16 Apr 2024 : ) -->
+	<!--header-->
+	<div class="header">
+		 <p id="home"><a href="https://www.yumoon.kr">YU MOON</a></p>
+		 <p id="about"></p>
+	</div>
+	<!--footer-->
+	<div class="footer">
+		<p id="contact"><a target="_blank" href="mailto:yumoon.work@gmail.com">EMAIL</a>  &nbsp;&nbsp;| &nbsp;&nbsp;<a target="_blank" href="https://www.instagram.com/yumoon.kr/">SNS</a></p>
+		 <p id="time"></p>
+	</div>
+	<!--slides-->
+	<div class="containerLink">
+		<span class="link"> 
+			<a href="projects/6.html">
+				<img src="images/6.1.jpg">
+			</a>
+			<span class="category">
+				<span class="title">Roots & Shoots</span>
+				<span>Public Identity &nbsp;|  &nbsp;Type Design</span>
+			</span>
+		</span>
+		<span class="link"> 
+			<a href="projects/5.html">
+				<img src="images/5.10.jpg">
+			</a>
+			<span class="category">
+				<span class="title">Berger Museum</span>
+				<span>Museum · Exhibition Identity</span>
+			</span>
+		</span>
+		<span class="link"> 
+			<a href="projects/4.html">
+				<img src="images/4.6.jpg">
+			</a>
+			<span class="category">
+				<span class="title">Ei</span>
+				<span>Publication &nbsp;|  &nbsp;Zine</span>
+			</span>
+		</span>
+		<span class="link"> 
+			<a href="projects/3.html">
+				<img src="images/3.1.jpg">
+			</a>
+			<span class="category">
+				<span class="title">Appendix</span>
+				<span>Type Design</span>
+			</span>
+		</span>
+		<span class="link"> 
+			<a href="projects/2.html">
+				<img src="images/2.1.jpg">
+			</a>
+			<span class="category">
+				<span class="title">Public Bikes</span>
+				<span>Infographic</span>
+			</span>
+		</span>
+		<span class="link"> 
+			<a href="projects/1.html">
+				<img src="images/1.1.jpg">
+			</a>
+			<span class="category">
+				<span class="title">Play with T</span>
+				<span>Graphic &nbsp;|  &nbsp;Poster Series</span>
+			</span>
+		</span>
+	</div>
+	<script>
+		var about = document.getElementById("about");
+		var text = "YU MOON is a graphic designer based in Seoul, KR, who loves to play with typography, identity, branding, web, and printed matter. Looking for playful projects and work available from May 2024."
+		var result = "";
+		window.addEventListener("load", (event) => {
+  		for (let i = 0; i < text.length; i++) {
+    	setTimeout(function () {
+     	result += text[i];
+      	about.innerHTML = result;
+		    }, 30 * i);
+		  }
+		});
+
+
+		setInterval(myTimer, 1000);
+
+		function myTimer() {
+		const d = new Date();
+		document.getElementById("time").innerHTML = d.toLocaleTimeString();
+		}
+	</script>
+</body>
+</html>
