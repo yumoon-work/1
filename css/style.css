@@ -328,7 +328,7 @@ img {
 /*mobile*/
 @media screen and (max-width: 600px) {
     body {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .header {
@@ -336,12 +336,22 @@ img {
         width: 100vw;
         float: left;
         z-index: 1;
-        font-size: 1rem !important;
-        padding: 0.8rem 1rem;
+        font-size: .8rem !important;
+        padding: .65rem .65rem;
+    }
+
+    .footer {
+        padding: .65rem .65rem;
+    }
+
+    .category span {
+    font-size: .6rem;
+    opacity: .5;
+    letter-spacing: 0rem;
     }
 
     .containerLink {
-        padding: 35vw 1rem 5rem 1rem;
+        padding: 25vh .65rem 8rem .65rem;
         width: 100vw
     }
 
@@ -355,8 +365,12 @@ img {
         padding: 0rem 0rem !important;
     }
 
+    #credit {
+    padding: .65rem .65rem 2.5rem .65rem;
+    }
+
     #images img:last-child {
-    padding-bottom: 5rem!important;
+    padding-bottom: 8rem !important;
     }
 
     #images #desktop,
