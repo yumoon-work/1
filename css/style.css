@@ -43,13 +43,10 @@ ol, ul {
     float: left;
     overflow-x: hidden;
     overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     padding: 0.8rem 0rem 5rem 1rem;
     box-sizing: border-box;
     font-family: groteskremix;
-    font-size: 2.85vw;
-    line-height: 1.365;
+    font-size: 2.65rem;
 /*
     font-size: 2.85rem;
 */
@@ -57,7 +54,7 @@ ol, ul {
 }
 
 .footer {
-    z-index: 100;
+    z-index: 200;
     position: absolute;
     bottom: 0;
     width: 100vw;
@@ -90,7 +87,6 @@ ol, ul {
     box-sizing: border-box;
 }
 
-.container::-webkit-scrollbar,
 .containerLink::-webkit-scrollbar,
 .header::-webkit-scrollbar {
     display: none;
@@ -150,6 +146,34 @@ ol, ul {
     font-size: .75rem;
     opacity: .5;
     letter-spacing: 0rem;
+}
+
+.gradientTop,
+.gradientBottom {
+  display: block;
+  position: absolute;
+  z-index: 150;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  content: "";
+  position: absolute;
+  height: 5rem;
+  width: 100vw;
+}
+
+.gradientTop {
+  top: 0;
+  background-image: -webkit-gradient(linear, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  background-image: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.gradientBottom {
+  bottom: 0;
+  background-image: -webkit-gradient(linear, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+  background-image: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
 }
 
 #home {
@@ -253,18 +277,20 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+.header a:hover,
+.footer a:hover,
+#headerInside a:hover,
+#credit a:hover {
     color: #636466;
     cursor: pointer;
     border-bottom: 0.1rem solid #636466;
 }
 
-.link a:active,
-.link a:hover {
-    opacity: 0.75;
+.linkimg:hover,
+.linkimg:active {
+    opacity: 0.6;
     color: #212121 !important;
     cursor: pointer;
-    border-bottom: none !important;
 }
 
 a:active {
@@ -310,7 +336,7 @@ img {
         width: 100vw;
         float: left;
         z-index: 1;
-        font-size: .8rem !important;
+        font-size: .8rem;
         padding: .65rem .65rem;
     }
 
@@ -357,8 +383,15 @@ img {
     }
 }
 
-/*for inner pages flex &*/
-@media screen and (max-width: 900px) {
+/*only mobile image*/
+@media screen and (min-width: 600px) {
+    #images #mobile {
+    display: none;
+    }
+}
+
+/*for inner pages flex or tablet*/
+@media screen and (max-width: 900px) and (min-width: 600px) {
     #credit,
     #images {
         flex: 100%;
@@ -371,20 +404,17 @@ img {
         flex: 100%;
     }
 
+    .container::-webkit-scrollbar {
+        display: none;
+    }
 
     .header {
-        font-size: 1.25rem;
-        line-height: inherit !important;
+        font-size: 1.5rem;
     }
-/*
-        line-height: 1.65;
-        font-size: 1.85rem;
-*/
 }
 
-/*only mobile image*/
-@media screen and (min-width: 600px) {
-    #images #mobile {
-    display: none;
+@media screen and (max-width: 1440px) and (min-width:900px) {
+    .header {
+        font-size: 2rem;
     }
 }
