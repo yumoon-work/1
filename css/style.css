@@ -328,7 +328,7 @@ img {
 /*mobile*/
 @media screen and (max-width: 600px) {
     body {
-        font-size: .8rem;
+        font-size: .9rem;
     }
 
     .header {
@@ -336,16 +336,20 @@ img {
         width: 100vw;
         float: left;
         z-index: 1;
-        font-size: .8rem;
-        padding: .65rem .65rem;
+        font-size: .9rem;
+        padding: .85rem .85rem;
     }
 
     .footer {
-        padding: .65rem .65rem;
+        padding: .85rem .85rem;
     }
 
     #headerInside {
-        padding: .65rem .65rem;
+        padding: .85rem .85rem;
+    }
+
+    .category .title {
+        font-size: .9rem;
     }
 
     .category span {
@@ -355,7 +359,7 @@ img {
     }
 
     .containerLink {
-        padding: 25vh .65rem 6rem .65rem;
+        padding: 25vh .85rem 6rem .85rem;
         width: 100vw
     }
 
@@ -370,7 +374,7 @@ img {
     }
 
     #credit {
-    padding: .65rem .65rem 2.5rem .65rem;
+    padding: .85rem .85rem 2.5rem .85rem;
     }
 
     #images img:last-child {
@@ -391,7 +395,7 @@ img {
 }
 
 /*for inner pages flex or tablet*/
-@media screen and (max-width: 900px) and (min-width: 600px) {
+@media screen and (max-width: 900px) {
     #credit,
     #images {
         flex: 100%;
@@ -407,7 +411,9 @@ img {
     .container::-webkit-scrollbar {
         display: none;
     }
+}
 
+@media screen and (max-width: 900px) and (min-width: 600px) {
     .header {
         font-size: 1.5rem;
     }
