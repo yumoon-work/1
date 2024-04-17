@@ -257,6 +257,10 @@ ol, ul {
 
 }
 
+#images img:last-child {
+    padding-bottom: 3rem;
+}
+
 body {
     position: relative;
     font-family: groteskremix, suisse, sans-serif;
@@ -317,14 +321,6 @@ li {
   padding-right: 1rem;
 }
 
-/*
-img {
-    max-width: 100vw;
-    max-height: 100vh;
-    object-fit: cover;
-}
-*/
-
 /*mobile*/
 @media screen and (max-width: 600px) {
     body {
@@ -359,7 +355,7 @@ img {
     }
 
     .containerLink {
-        padding: 25vh .85rem 6rem .85rem;
+        padding: 35vh .85rem 6rem .85rem;
         width: 100vw
     }
 
