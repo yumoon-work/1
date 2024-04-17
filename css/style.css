@@ -324,7 +324,7 @@ li {
 /*mobile*/
 @media screen and (max-width: 600px) {
     body {
-        font-size: .85rem;
+        font-size: .825rem;
     }
 
     .header {
@@ -332,7 +332,7 @@ li {
         width: 100vw;
         float: left;
         z-index: 1;
-        font-size: .85rem;
+        font-size: .825rem;
         padding: .85rem .85rem;
     }
 
@@ -345,7 +345,7 @@ li {
     }
 
     .category .title {
-        font-size: .85rem;
+        font-size: .825rem;
     }
 
     .category span {
@@ -355,7 +355,7 @@ li {
     }
 
     .containerLink {
-        padding: 30vh .85rem 6rem .85rem;
+        padding: 35vh .85rem 6rem .85rem;
         width: 100vw
     }
 
