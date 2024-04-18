@@ -88,7 +88,8 @@ ol, ul {
 }
 
 .containerLink::-webkit-scrollbar,
-.header::-webkit-scrollbar {
+.header::-webkit-scrollbar,
+#credit::-webkit-scrollbar {
     display: none;
 }
 
@@ -242,6 +243,7 @@ ol, ul {
 
  #description {
     font-weight: 500;
+    padding-bottom: 3rem;
  }
 
 #images {
@@ -377,6 +379,10 @@ li {
     #credit {
     padding: .85rem .85rem 2.5rem .85rem;
     }
+
+     #description {
+        padding-bottom: 0rem;
+     }
 
     #images img:last-child {
     padding-bottom: 6rem !important;
