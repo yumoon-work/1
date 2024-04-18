@@ -325,6 +325,7 @@ li {
 @media screen and (max-width: 600px) {
     body {
         font-size: .825rem;
+        letter-spacing: -0.0274rem;;
     }
 
     .header {
@@ -344,6 +345,10 @@ li {
         padding: .85rem .85rem;
     }
 
+    .category {
+        margin-bottom: 4.5rem;
+    }
+
     .category .title {
         font-size: .825rem;
     }
@@ -355,7 +360,7 @@ li {
     }
 
     .containerLink {
-        padding: 35vh .85rem 6rem .85rem;
+        padding: 25vh .85rem 6rem .85rem;
         width: 100vw
     }
 
