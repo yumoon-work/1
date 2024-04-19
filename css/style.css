@@ -148,7 +148,7 @@ ol, ul {
     opacity: .5;
     letter-spacing: 0rem;
 }
-
+/*
 .gradientTop,
 .gradientBottom {
   display: block;
@@ -176,7 +176,7 @@ ol, ul {
   background-image: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
 }
-
+*/
 #home {
     z-index: 1000;
     position: absolute;
@@ -190,12 +190,42 @@ ol, ul {
 #nextInside {
     position: relative;
     float: right;
+    letter-spacing: .005rem;    
 }
 
 #scroll {
     float: right;
-    letter-spacing: .075rem; 
+    letter-spacing: .05rem; 
+    animation: blink 1s infinite;
+    -webkit-animation: blink 1s infinite;
 }
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+#scroll {
+    float: right;
+    letter-spacing: .05rem; 
+    animation: blink-animation .2s steps(5, start) infinite;
+    -webkit-animation: blink-animation .2s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+*/
 
 #contact {
     float: left;
