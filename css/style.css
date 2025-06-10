@@ -17,9 +17,9 @@ botton {
 */
     background: #000;
     color: white;
-    height: 100%;
+    width: 100vw;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: visible;
 }
 
 ol, ul {
@@ -299,7 +299,7 @@ img {
   position: fixed;
   z-index: 300;
   top: 1rem;
-  right: 1rem;
+  right: 1.75rem;
   float: right;
   text-align: left;
 }
@@ -326,7 +326,7 @@ img {
 }
 
 .description {
-    display: block;
+    position: fixed;
     z-index: 300;   
     text-align: left; 
     margin-bottom: 1rem;
@@ -357,7 +357,6 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -475,7 +474,7 @@ img {
     letter-spacing: -0.04rem;
     word-spacing: -0.06rem;
     font-kerning: auto;
-    } 
+    }   
 
     .foldedfilter {
     float: right;
