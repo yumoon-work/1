@@ -112,7 +112,8 @@ a {
     color: black;
 }
 
-a:hover {
+a:hover,
+summary:hover {
     color: #636466;
     cursor: pointer;
 /*
@@ -442,6 +443,10 @@ img {
 
     .workcredit {
         display: none;
+    }
+
+    .foldedfilter {
+        right: 1rem;
     }
 
     .description,
