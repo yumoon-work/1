@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>H for Html & Helsinki</title>
+	<style>
+		*,
+		*::before,
+		*::after {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: 100%;
+		font-style: normal;
+		}
+
+		html,
+		body,
+		botton {
+		width: 100vw;
+		overflow-x: hidden;
+		overflow-y: visible;
+		}
+
+		/* typography */
+
+		@font-face {
+		    font-family: 'erika-mono';
+		    src: url('fonts/G2-Erika-Mono.woff2') format('woff2');
+		}
+
+		@font-face {
+		    font-family: 'erika';
+		    src: url('fonts/G2-Erika-Regular.woff2') format('woff2');
+		}
+
+		@font-face {
+		    font-family: 'erika-mono-bold';
+		    src: url('fonts/G2ErikaMono-Bold.woff2') format('woff2');
+		}
+
+		@font-face {
+		    font-family: 'erika-bold';
+		    src: url('fonts/G2Erika-Bold.woff2') format('woff2');
+		}
+
+		.collapsible {
+		  font-family: erika-bold;
+		  background: white;
+		  color: black;
+		  cursor: pointer;
+		  padding: .8rem;
+		  width: 100%;
+		  text-align: left;
+		  outline: none;
+		  font-size: 16px;
+		  border-color: black;
+		  border-right: none;
+		  border-left: none;
+		  border-bottom: none;
+		  border-width: 1px;
+		}
+
+		.active, .collapsible:hover {
+		  background: #E6E6E6;
+		}
+
+		.collapsible:after {
+		  content: '\002B';
+		  color: black;
+		  float: right;
+		  margin-left: 5px;
+		}
+
+		.active:after {
+		  content: "\2212";
+		}
+
+		.content {
+		  font-family: erika;
+		  padding: 0 .8rem;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		  background-color: #E6E6E6;
+		}
+
+		.collapsible-html {
+		  font-family: erika-mono-bold;
+		  background: white;
+		  color: black;
+		  cursor: pointer;
+		  padding: .8rem;
+		  width: 100%;
+		  text-align: left;
+		  outline: none;
+		  font-size: 16px;
+		  border-color: black;
+		  border-right: none;
+		  border-left: none;
+		  border-bottom: none;
+		  border-width: 1px;
+		}
+
+		.active-html, .collapsible-html:hover {
+		  background: #000000;
+		  color: white;
+		}
+
+		.content-html {
+		  font-family: erika-mono;
+		  padding: 0 .8rem;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		  background-color: #000000;
+		  color: white;
+		}
+
+		.row {
+		  display: flex;
+		}
+
+		.column {
+		  flex: 50%;	
+		}
+
+		.html{
+			background: #000000;
+			color: #ffffff;
+			font-family: erika-mono-bold; sans-serif;
+			font-size: 18px;
+			line-height: 1.2;
+			letter-spacing: -0.01rem;
+			word-spacing: -0.06rem;
+			-webkit-font-smoothing: antialiased;
+			font-kerning: auto; 
+		 	padding: .2rem .8rem;	
+		}
+
+		.helsinki{
+			background: #E6E6E6;
+			color: #000000;
+			font-family: erika-bold; sans-serif;
+			font-size: 18px;
+			line-height: 1.2;
+			letter-spacing: -0.01rem;
+			word-spacing: 0.06rem;
+			-webkit-font-smoothing: antialiased;
+			font-kerning: auto; 				
+		 	padding: .2rem .8rem;	
+		}
+	</style>
+</head>
+	<div class="row">
+	  <div class="column">
+		<div class="html">H for<br>Html</div>
+			<button class="collapsible-html">#001 | 02.08.2025</button>
+				<div class="content-html">
+				  <p>Today is HTML day! It's my first time writing HTML here in Helsinki, and I'm doing it with Soi, Joni, and Lyra. The four of us are together in room 3 on the second floor of the Oodi library. This couldn't be a better day to start practicing HTML.</p>
+				</div>
+			<button class="collapsible-html">#002 | 03.08.2025</button>
+				<div class="content-html">
+				  <p>write anything about HTML practice</p>
+				</div>			
+			<button class="collapsible-html">#003 | 04.08.2025</button>
+				<div class="content-html">
+				  <p>write anything about HTML practice</p>
+				</div>	
+			<button class="collapsible-html">#004 | 05.08.2025</button>
+				<div class="content-html">
+				  <p>write anything about HTML practice</p>
+				</div>	
+			<button class="collapsible-html">#005 | 06.08.2025</button>
+				<div class="content-html">
+				  <p>write anything about HTML practice</p>
+				</div>	
+	  </div>
+	  <div class="column">
+		<div class="helsinki">H for<br>Helsinki</div>
+			<button class="collapsible">Day 019</button>
+				<div class="content">
+				  <p>It was a sunny Sunday at 11 a.m., and I grabbed a coffee with Soi, whom I had met the day before at the HTML Day event. We had two iced lattes and a piece of carrot cake. It was a perfect Sunday afternoon vibe. We were slowing down and relaxing, talking, journaling, reading, and watching the water flow.</p>
+				</div>		
+			<button class="collapsible">Day 020</button>
+				<div class="content">
+				  <p>본격적인 업무 1일차. 스페인에서 온 Miquel는 오늘이 첫 날이다. 나와 같이 처음인 사람이 함께 있다는 사실이 꽤나 위안이 된다. 누구나 처음은 시간이 걸릴 수 있음을, 그를 보며 나 역시 조금은 뒤로 젖혀진 자세를 취하자고 다시금 생각한다. 너무 serious하지 않아도 된다는 것. 월요일 주간 미팅은 사실상 조금 exhausted한 감이 있었다. 휴가가 끝나고서 처음하는 미팅이어서인지 굉장히 많은 프로젝트와 pitches가 우리를 기다리고 있었다. 커피를 석 잔 마신 하루. 동료들이 정말 친근하게 다가왔다. Mikko는 How was your weekend?를 출근길 문 앞에서 물었고, 나는 HTML Day 이야기를, 그는 보트를 드라이브해 도시 바깥에서 하루를 보냈다고 말해줬다. 자주 간다고 하더라. 그리고 드디어 만난 Anssi. 점심은 Aliz와 Miquel과 함께 마켓 2층의 집에서 lammin 한 접시씩을 사먹었다. 맛있고 배부른 점심. 이곳에 오고서 처음 먹는 쌀... 행복한 점심을 먹고서 지나치게 날씨가 좋아서 오피스에 돌아가기에 아쉬울 만큼 좋은 날씨를 짧게 느끼고, KEUNE 프로젝트 kick off meeting에 참여했다. 4주 후 pitch가 있기에 상당히 좋은 timeline에, 흥미롭게, 자신있게 참여할 수 있는 성격의 VIS 프로젝트라 inspiring project가 되겠지 싶다. 재밌게! 그냥 하면 되지 :^)</p>
+				</div>	
+			<button class="collapsible">Day 003</button>
+				<div class="content">
+				  <p>write anything about a day</p>
+				</div>	
+			<button class="collapsible">Day 004</button>
+				<div class="content">
+				  <p>write anything about a day</p>
+				</div>	
+			<button class="collapsible">Day 005</button>
+				<div class="content">
+				  <p>write anything about a day</p>
+				</div>	
+	  </div>
+	</div>
+
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
+	<script>
+	var coll = document.getElementsByClassName("collapsible-html");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active-html");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
+</body>
+</html>
