@@ -191,8 +191,9 @@ footer {
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Lock the wrapper to the viewport height */
-    overflow: hidden; /* Prevent the body from scrolling */
+    height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
 }
 
 .main-content > *:first-child {
@@ -331,6 +332,8 @@ img {
         height: auto;
         min-height: 20vh;
         padding: 1rem;
+        flex-wrap: wrap; 
+        padding-bottom: env(safe-area-inset-bottom);
     }
 
     body {
@@ -386,7 +389,8 @@ img {
     }
 
 
-    .linkimg {
+    .linkimg,
+    .hero-video {
         margin-bottom: 2rem;
     }
 
