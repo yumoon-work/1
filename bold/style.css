@@ -1,0 +1,289 @@
+@font-face {
+  font-family: "Default Sans Bold";
+  src: url("fonts/SuisseIntl-Bold-WebS.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Default Sans Book";
+  src: url("fonts/SuisseIntl-Book-WebM.woff2") format("woff2");
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Default Sans Bold, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+code,
+pre {
+  font-family: Courier, "Courier New", monospace;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fafafa;
+  background-color: black;
+  cursor: default;
+  letter-spacing: -0.016rem;
+  word-spacing: -0.064rem;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: auto; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 1.5rem;
+}
+
+.index::-webkit-scrollbar {
+  display: none;
+}
+
+.index li {
+  width: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .index li {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .index li {
+    width: 20%;
+  }
+}
+
+.card {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  color: #fafafa;
+  background-color: black;
+  border-radius: 1.5rem;
+}
+
+.card-title {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 5vw;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.section {
+  display: none;
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 1.5rem 1.5rem 5vw 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #fafafa;
+  background-color: black;
+}
+
+@media screen and (min-width: 428px) {
+  .section {
+    font-size: 5vw;
+    line-height: 1.125;
+  }
+}
+
+.section::-webkit-scrollbar {
+  display: none;
+}
+
+.section:target {
+  display: block;
+  z-index: 999;
+  border-radius: 1.5rem;
+}
+
+.content h1 {
+  font-size: 13.75vw;
+  font-weight: 900;
+  line-height: 1;
+  hyphens: auto;
+}
+
+.content blockquote {
+  margin-left: 1em;
+}
+
+.content a {
+  text-decoration: underline;
+}
+
+.content > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  bottom: .5rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #fafafa;
+}
+
+.button.close {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.button.prev {
+  left: .5rem;
+}
+
+.button.next {
+  right: .5rem;
+}
