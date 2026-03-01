@@ -201,8 +201,8 @@ div.indent {
     grid-column: span 2;
 }
 
-.typography,
-.branding {
+.branding,
+.typography {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-column-gap: 1rem;
