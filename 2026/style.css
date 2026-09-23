@@ -115,18 +115,26 @@ footer {
     z-index: 100;
 }
 
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+}
+
 .button {
     display: inline-block;
     background: #e9e9e9;
     color: #000;
     text-decoration: none;
     border: none;
-    border-radius: 16px; 
-    padding: 2px 16px;
-    margin: 2px;
+    border-radius: 16px;
+    padding: 8px 16px;
+    margin: 0;
     cursor: pointer;
     font-size: 1rem;
-    height: 1.5rem;
+    height: auto;
 }
 
 .button_active {
@@ -134,12 +142,12 @@ footer {
     color: #fff;
     text-decoration: none;
     border: none;
-    border-radius: 16px; 
-    padding: 2px 16px;
-    margin: 2px;
+    border-radius: 16px;
+    padding: 8px 16px;
+    margin: 0;
     cursor: pointer;
     font-size: 1rem;
-    height: 1.5rem;
+    height: auto;
 }
 
 .button:hover,
@@ -162,6 +170,7 @@ footer {
 
 .minimal {
     height: auto;
+    grid-template-columns: 1fr;
 }
 
 /* canvas */
@@ -180,6 +189,10 @@ footer {
     width: 100%;
     height: 80vh;
     z-index: 0;
+    /* promote to its own compositor layer so Chrome doesn't repaint the
+       whole fixed-position canvas on the main thread during drag/physics updates */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 #interactive__text {
@@ -191,9 +204,8 @@ footer {
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    min-height: 100dvh;
-    overflow: hidden;
+    height: 100vh; /* Lock the wrapper to the viewport height */
+    overflow: hidden; /* Prevent the body from scrolling */
 }
 
 .main-content > *:first-child {
@@ -221,23 +233,42 @@ footer {
     margin-top: auto;
 }
 
+.main-content > .hero-top:first-child {
+    margin-top: 0;
+}
+
+.hero-top div {
+    margin-top: 0;
+    align-self: start;
+}
+
 .info {
     margin-bottom: 1rem;
     text-align: center;
     font-family: suissemono;
 }
 
+.hero-top .info {
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.hero-top .title {
+    font-family: suisse, sans-serif;
+}
+
 /* each project pages */
 
 :root {
     --main-gap: 1rem; /* Consistent gap between images */
-    --top-header-gap: 1rem; 
+    --top-header-gap: 1rem;
 }
 
 /* Base image container styles */
-.single-column, 
+.single-column,
 .two-column {
-    padding: 0 var(--main-gap); 
+    padding: 0 var(--main-gap);
     margin-bottom: var(--main-gap); /* Vertical gap matching internal grid gap */
 }
 
@@ -296,6 +327,30 @@ img {
     border-radius: 8px;
 }
 
+/* photography */
+
+.photo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    padding: 1rem;
+}
+
+.main-content > .photo:first-child {
+    margin-top: 0;
+}
+
+.photoinfo {
+    font-family: suissemono;
+    font-size: .85rem;
+    align-self: start;
+}
+
+.photo img {
+    border-radius: 0;
+}
+
 /* media format */
 
 @media all and (max-width: 900px) {
@@ -303,6 +358,11 @@ img {
     .hero,
     .two-column {
         grid-template-columns: 1fr;
+    }
+
+    .photo {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
     }
 
     .info {
@@ -332,8 +392,6 @@ img {
         height: auto;
         min-height: 20vh;
         padding: 1rem;
-        flex-wrap: wrap; 
-        padding-bottom: env(safe-area-inset-bottom);
     }
 
     body {
@@ -389,8 +447,7 @@ img {
     }
 
 
-    .linkimg,
-    .hero-video {
+    .linkimg {
         margin-bottom: 2rem;
     }
 
