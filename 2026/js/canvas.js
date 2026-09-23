@@ -461,6 +461,14 @@ function addMouseInteraction() {
         return header ? header.getBoundingClientRect().bottom : 0;
     }
 
+    // Any tap/click that starts on a real link (footer nav, intro credits,
+    // email) should never be captured by the canvas drag/physics handling,
+    // regardless of where on the page it sits.
+    function isLinkTarget(e) {
+        var target = e.target;
+        return !!(target && typeof target.closest === "function" && target.closest("a"));
+    }
+
     function removeTouchListeners() {
         Matter.Mouse.clearSourceEvents(mouseSource);
         docBody.removeEventListener("touchmove", mouseSource.mousemove, touchOpts);
@@ -484,13 +492,13 @@ function addMouseInteraction() {
     }, false);
 
     docBody.addEventListener("mousedown", function(e) {
-        isHeaderInteraction = e.clientY < getHeaderBottom();
+        isHeaderInteraction = e.clientY < getHeaderBottom() || isLinkTarget(e);
         isTouchDrag = false;
         draggedBody = null;
     }, false);
 
     docBody.addEventListener("touchstart", function(e) {
-        isHeaderInteraction = !!(e.touches && e.touches.length > 0) && e.touches[0].clientY < getHeaderBottom();
+        isHeaderInteraction = (!!(e.touches && e.touches.length > 0) && e.touches[0].clientY < getHeaderBottom()) || isLinkTarget(e);
 
         if (isHeaderInteraction) {
             removeTouchListeners();

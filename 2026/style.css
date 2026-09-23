@@ -72,7 +72,9 @@ a {
 }
 
 .main-content a:hover,
-.main-content a:active {
+.main-content a:active,
+h1 a:hover,
+h1 a:active {
     color: #636466;
     cursor: pointer;
 }
@@ -82,17 +84,6 @@ a {
     opacity: 0.6;
     color: #212121;
     cursor: pointer;
-}
-
-h1 a:hover {
-  animation: blink-animation .4s steps(5, start) infinite;
-  -webkit-animation: blink-animation .4s steps(5, start) infinite;
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
 }
 
 .italic {
@@ -391,7 +382,7 @@ img {
         flex-direction: column;
         height: auto;
         min-height: 20vh;
-        padding: 1rem;
+        padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom)) 1rem;
     }
 
     body {
@@ -441,8 +432,8 @@ img {
 
     .hide-footer-details footer {
         /* This makes the footer height match the buttons exactly */
-        height: auto; 
-        padding: 1rem;
+        height: auto;
+        padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom)) 1rem;
         display: block; /* Simplifies layout since we only have one item (buttons) */
     }
 
@@ -451,9 +442,17 @@ img {
         margin-bottom: 2rem;
     }
 
+    .wrapper {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh; /* Safari's real visible viewport, excludes the address bar */
+        overflow: visible; /* Let the page scroll so the footer buttons are always reachable */
+    }
+
     .main-content {
         display: flex;
         flex-direction: column;
+        overflow-y: visible;
     }
 
     .project-details {
@@ -488,7 +487,7 @@ img {
     .hide-footer-details footer {
         height: auto;
         min-height: 10vh; /* As requested */
-        padding: 1rem;
+        padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom)) 1rem;
     }
 }
 
