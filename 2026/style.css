@@ -479,27 +479,15 @@ video {
     }
 
     .wrapper {
-        height: auto;
-        min-height: 100vh;
-        min-height: 100svh; /* Safari's real visible viewport, excludes the address bar */
-        overflow: visible; /* Let the page scroll so the footer only appears at the bottom of the page */
+        height: 100vh;
+        height: 100svh; /* Safari's real visible viewport, excludes the address bar */
+        overflow: hidden; /* Lock the footer to the bottom of the visible viewport */
     }
 
     .main-content {
         display: flex;
         flex-direction: column;
-        overflow-y: visible;
-    }
-
-    /* index.html only: keep the footer locked to the visible viewport */
-    .index-page .wrapper {
-        height: 100vh;
-        height: 100svh;
-        overflow: hidden;
-    }
-
-    .index-page .main-content {
-        overflow-y: auto;
+        overflow-y: auto; /* Content scrolls internally instead of the whole page */
     }
 
     .project-details {
