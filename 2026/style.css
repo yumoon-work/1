@@ -306,10 +306,11 @@ footer {
 
 /* image */
 
-img {
+img,
+video {
     width: 100%;
     border-radius: 8px;
-    background-color: rgba(0,0,0,0.05);   
+    background-color: rgba(0,0,0,0.05);
 }
 
 .hero-video {
@@ -342,6 +343,37 @@ img {
     border-radius: 0;
 }
 
+/* writing */
+
+.writing-page,
+.writing-page .wrapper,
+.writing-page .main-content {
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+}
+
+.writing-page .main-content > *:first-child {
+    margin-top: 0;
+}
+
+.writing {
+    column-count: 6;
+    column-gap: 1rem;
+    padding: 1rem;
+}
+
+.writing p,
+.writing blockquote,
+.writing figure {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+}
+
+.writing blockquote {
+    margin-left: 1rem;
+}
+
 /* media format */
 
 @media all and (max-width: 900px) {
@@ -354,6 +386,10 @@ img {
     .photo {
         grid-template-columns: repeat(3, 1fr);
         padding: 1rem;
+    }
+
+    .writing {
+        column-count: 2;
     }
 
     .info {
@@ -443,16 +479,15 @@ img {
     }
 
     .wrapper {
-        height: auto;
-        min-height: 100vh;
-        min-height: 100svh; /* Safari's real visible viewport, excludes the address bar */
-        overflow: visible; /* Let the page scroll so the footer buttons are always reachable */
+        height: 100vh;
+        height: 100svh; /* Safari's real visible viewport, excludes the address bar */
+        overflow: hidden; /* Lock the footer to the bottom of the visible viewport */
     }
 
     .main-content {
         display: flex;
         flex-direction: column;
-        overflow-y: visible;
+        overflow-y: auto; /* Content scrolls internally instead of the whole page */
     }
 
     .project-details {
